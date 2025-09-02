@@ -1,0 +1,91 @@
+repository:
+  name: NORMAL_DANCE
+  description: "NormalDance - инновационная платформа для создания, распространения и монетизации музыкального контента на базе блокчейн-технологий"
+  homepage: https://normaldance.com
+  topics: music, web3, nft, solana, decentralized, blockchain, streaming
+  private: true
+  has_issues: true
+  has_projects: true
+  has_wiki: false
+  has_downloads: true
+  default_branch: main
+  allow_squash_merge: true
+  allow_merge_commit: false
+  allow_rebase_merge: true
+  delete_branch_on_merge: true
+  enable_automated_security_fixes: true
+  enable_vulnerability_alerts: true
+
+labels:
+  - name: bug
+    color: d73a4a
+    description: Something isn't working
+  - name: enhancement
+    color: a2eeef
+    description: New feature or request
+  - name: documentation
+    color: 0075ca
+    description: Improvements or additions to documentation
+  - name: security
+    color: ee0701
+    description: Security related issues
+  - name: dependencies
+    color: 0366d6
+    description: Pull requests that update a dependency file
+  - name: performance
+    color: fbca04
+    description: Performance improvements
+  - name: refactor
+    color: 7057ff
+    description: Code refactoring
+  - name: ci/cd
+    color: 28a745
+    description: Continuous integration and deployment
+  - name: mobile
+    color: f9d0c4
+    description: Mobile app related
+  - name: web3
+    color: 5319e7
+    description: Web3 and blockchain related
+  - name: priority:high
+    color: b60205
+    description: High priority
+  - name: priority:medium
+    color: fbca04
+    description: Medium priority
+  - name: priority:low
+    color: 0e8a16
+    description: Low priority
+
+branches:
+  - name: main
+    protection:
+      required_status_checks:
+        strict: true
+        contexts:
+          - test
+          - build
+          - security
+      enforce_admins: false
+      required_pull_request_reviews:
+        required_approving_review_count: 1
+        dismiss_stale_reviews: true
+        require_code_owner_reviews: true
+      restrictions: null
+      allow_force_pushes: false
+      allow_deletions: false
+
+  - name: develop
+    protection:
+      required_status_checks:
+        strict: true
+        contexts:
+          - test
+          - build
+      enforce_admins: false
+      required_pull_request_reviews:
+        required_approving_review_count: 1
+        dismiss_stale_reviews: false
+      restrictions: null
+      allow_force_pushes: false
+      allow_deletions: false

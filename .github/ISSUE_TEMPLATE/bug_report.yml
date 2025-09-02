@@ -1,0 +1,61 @@
+name: Bug Report
+description: Сообщить об ошибке в NormalDance
+title: "[BUG] "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо за сообщение об ошибке! Пожалуйста, заполните форму ниже.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Описание ошибки
+      description: Четкое и краткое описание ошибки
+      placeholder: Опишите, что произошло...
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Шаги для воспроизведения
+      description: Шаги для воспроизведения ошибки
+      placeholder: |
+        1. Перейти к '...'
+        2. Нажать на '...'
+        3. Прокрутить вниз до '...'
+        4. Увидеть ошибку
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Ожидаемое поведение
+      description: Что должно было произойти
+    validations:
+      required: true
+
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Браузер
+      options:
+        - Chrome
+        - Firefox
+        - Safari
+        - Edge
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Версия
+      description: Какая версия NormalDance?
+      placeholder: v1.0.1
+    validations:
+      required: true

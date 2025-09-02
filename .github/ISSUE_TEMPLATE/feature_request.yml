@@ -1,0 +1,45 @@
+name: Feature Request
+description: Предложить новую функцию для NormalDance
+title: "[FEATURE] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо за предложение новой функции!
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Проблема
+      description: Какую проблему решает эта функция?
+      placeholder: Я всегда расстраиваюсь, когда...
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Предлагаемое решение
+      description: Что вы хотели бы видеть?
+      placeholder: Я хотел бы...
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Альтернативы
+      description: Какие альтернативные решения вы рассматривали?
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Приоритет
+      options:
+        - Low
+        - Medium
+        - High
+        - Critical
+    validations:
+      required: true

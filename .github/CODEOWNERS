@@ -1,0 +1,24 @@
+# Global owners
+* @AENDY
+
+# Frontend components
+/src/components/ @AENDY
+/src/app/ @AENDY
+
+# Backend API
+/src/app/api/ @AENDY
+
+# Infrastructure
+/.github/ @AENDY
+/docker/ @AENDY
+/k8s/ @AENDY
+/helm/ @AENDY
+
+# Documentation
+/docs/ @AENDY
+README.md @AENDY
+
+# Configuration files
+package.json @AENDY
+next.config.ts @AENDY
+tsconfig.json @AENDY
