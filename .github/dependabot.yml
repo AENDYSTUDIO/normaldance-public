@@ -6,14 +6,14 @@ updates:
     schedule:
       interval: "weekly"
       day: "monday"
-      time: "06:00"
-    open-pull-requests-limit: 10
+      time: "09:00"
+    open-pull-requests-limit: 5
     reviewers:
-      - "AENDY"
+      - "AENDYSTUDIO"
     assignees:
-      - "AENDY"
+      - "AENDYSTUDIO"
     commit-message:
-      prefix: "deps"
+      prefix: "⬆️"
       include: "scope"
 
   # Enable version updates for GitHub Actions
@@ -22,13 +22,15 @@ updates:
     schedule:
       interval: "weekly"
       day: "monday"
-      time: "06:00"
+      time: "09:00"
+    open-pull-requests-limit: 3
     reviewers:
-      - "AENDY"
+      - "AENDYSTUDIO"
     assignees:
-      - "AENDY"
+      - "AENDYSTUDIO"
     commit-message:
-      prefix: "ci"
+      prefix: "🔧"
+      include: "scope"
 
   # Enable version updates for Docker
   - package-ecosystem: "docker"
@@ -36,10 +38,12 @@ updates:
     schedule:
       interval: "weekly"
       day: "monday"
-      time: "06:00"
+      time: "09:00"
+    open-pull-requests-limit: 3
     reviewers:
-      - "AENDY"
+      - "AENDYSTUDIO"
     assignees:
-      - "AENDY"
+      - "AENDYSTUDIO"
     commit-message:
-      prefix: "docker"
+      prefix: "🐳"
+      include: "scope"

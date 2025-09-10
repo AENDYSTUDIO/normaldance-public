@@ -1,24 +1,35 @@
+# Code Owners для NormalDance
+
 # Global owners
-* @AENDY
+* @AENDYSTUDIO
 
 # Frontend components
-/src/components/ @AENDY
-/src/app/ @AENDY
+/src/components/ @AENDYSTUDIO
+/src/app/ @AENDYSTUDIO
 
-# Backend API
-/src/app/api/ @AENDY
+# Backend and API
+/src/api/ @AENDYSTUDIO
+/src/lib/ @AENDYSTUDIO
 
-# Infrastructure
-/.github/ @AENDY
-/docker/ @AENDY
-/k8s/ @AENDY
-/helm/ @AENDY
+# Infrastructure and DevOps
+/k8s/ @AENDYSTUDIO
+/aws/ @AENDYSTUDIO
+/scripts/ @AENDYSTUDIO
+/.github/ @AENDYSTUDIO
+
+# Security-related files
+/src/lib/security/ @AENDYSTUDIO
+/src/middleware.ts @AENDYSTUDIO
+SECURITY.md @AENDYSTUDIO
+PRIVACY.md @AENDYSTUDIO
 
 # Documentation
-/docs/ @AENDY
-README.md @AENDY
+/docs/ @AENDYSTUDIO
+README.md @AENDYSTUDIO
+CONTRIBUTING.md @AENDYSTUDIO
 
 # Configuration files
-package.json @AENDY
-next.config.ts @AENDY
-tsconfig.json @AENDY
+package.json @AENDYSTUDIO
+tsconfig.json @AENDYSTUDIO
+next.config.js @AENDYSTUDIO
+prisma/ @AENDYSTUDIO
