@@ -1,5 +1,5 @@
 # Multi-stage build for production
-FROM node:18-alpine AS deps
+FROM node:24-alpine AS deps
 WORKDIR /app
 
 # Install dependencies based on the preferred package manager
@@ -7,7 +7,7 @@ COPY package.json package-lock.json* ./
 RUN npm ci --only=production
 
 # Build the application
-FROM node:18-alpine AS builder
+FROM node:24-alpine AS builder
 WORKDIR /app
 
 # Install dependencies
@@ -21,7 +21,7 @@ COPY . .
 RUN npm run build
 
 # Production image, copy all the files and run next
-FROM node:18-alpine AS runner
+FROM node:24-alpine AS runner
 WORKDIR /app
 
 ENV NODE_ENV=production
