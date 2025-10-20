@@ -1,7 +1,7 @@
 # Многоэтапная сборка для NormalDance
 
 # Этап 1: Установка зависимостей
-FROM node:20-alpine AS deps
+FROM node:25-alpine AS deps
 WORKDIR /app
 
 # Копирование package.json и package-lock.json
@@ -18,7 +18,7 @@ RUN npm ci --only=production
 WORKDIR /app
 
 # Этап 2: Сборка приложения
-FROM node:20-alpine AS builder
+FROM node:25-alpine AS builder
 WORKDIR /app
 
 # Копирование зависимостей
@@ -38,7 +38,7 @@ RUN npm run build:android
 WORKDIR /app
 
 # Этап 3: Production среда
-FROM node:20-alpine AS runner
+FROM node:25-alpine AS runner
 WORKDIR /app
 
 # Создание пользователя
@@ -96,7 +96,7 @@ ENTRYPOINT ["dumb-init", "--"]
 CMD ["node", "server.ts"]
 
 # Этап 4: Development среда (опционально)
-FROM node:20-alpine AS dev
+FROM node:25-alpine AS dev
 WORKDIR /app
 
 # Установка всех зависимостей
